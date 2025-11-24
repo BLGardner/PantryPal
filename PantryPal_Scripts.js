@@ -8,6 +8,8 @@ let recipes = [];
 let shopping = [];
 let planner = {};
 let selectedRecipeId = null;
+let editingPantryId = null;
+let currentPlanSlot = null;
 
 const $ = id => document.getElementById(id);
 
@@ -130,6 +132,8 @@ function bindUI() {
   $('btnImportPantryList').onclick = importPantryList;
   $('btnSavePantry').onclick = savePantryItem;
   $('btnCancelPantry').onclick = () => closeModal('modalAddPantry');
+  $('btnUpdatePantry').onclick = updatePantryItem;
+  $('btnCancelEditPantry').onclick = () => closeModal('modalEditPantry');
 
   // Shopping
   $('btnAddShoppingItem').onclick = () => openModal('modalAddShopping');
@@ -140,6 +144,10 @@ function bindUI() {
 
   // Planner
   $('btnClearPlanner').onclick = clearPlanner;
+  $('btnConfirmPlanMeal').onclick = confirmPlanMeal;
+  $('btnCancelPlanMeal').onclick = () => closeModal('modalPlanMeal');
+  $('btnRemovePlanMeal').onclick = removePlannedMealFromModal;
+  $('planMealSearch').oninput = filterPlanMealList;
 
   // Import/Export
   $('btnExport').onclick = exportAllData;
@@ -200,7 +208,6 @@ function canMakeRecipe(recipe) {
     const found = pantry.find(p => {
       if (!p.available) return false;
       const pName = normalizeText(p.name);
-      // Strict matching
       return pName === ingName || pName.includes(ingName) || ingName.includes(pName);
     });
     
@@ -218,7 +225,6 @@ function renderRecipes() {
   
   let filtered = recipes.slice();
   
-  // Search filter
   if (searchTerm) {
     filtered = filtered.filter(r => {
       const nameMatch = normalizeText(r.name).includes(searchTerm);
@@ -229,12 +235,10 @@ function renderRecipes() {
     });
   }
   
-  // Availability filter
   if (filterType === 'available') {
     filtered = filtered.filter(r => canMakeRecipe(r));
   }
   
-  // Sort alphabetically
   filtered.sort((a, b) => a.name.localeCompare(b.name));
   
   if (filtered.length === 0) {
@@ -248,17 +252,17 @@ function renderRecipes() {
     if (selectedRecipeId === recipe.id) item.classList.add('active');
     
     const canMake = canMakeRecipe(recipe);
-    const badge = canMake ? 
-      '<span class="badge ready">Can Make</span>' : 
-      '<span class="badge missing">Missing Items</span>';
+    const icon = canMake ? 
+      '<span class="status-icon ready">✓</span>' : 
+      '<span class="status-icon missing">✗</span>';
     
     item.innerHTML = `
-      <div style="display:flex; justify-content:space-between; align-items:center;">
-        <div>
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:8px;">
+        <div style="flex:1; min-width:0;">
           <div style="font-weight:600;">${recipe.name}</div>
           <div class="small-note">${recipe.category || 'Uncategorized'}</div>
         </div>
-        ${badge}
+        ${icon}
       </div>
     `;
     
@@ -302,9 +306,9 @@ function displayRecipeDetail(id) {
     (recipe.instructions || 'No instructions provided');
   
   detail.innerHTML = `
-    <div class="hstack" style="margin-bottom:20px;">
-      <h2 style="margin:0;">${recipe.name}</h2>
-      <button class="button small secondary" onclick="editRecipe(${recipe.id})" style="margin-left:auto;">Edit</button>
+    <div class="hstack" style="margin-bottom:20px; flex-wrap:wrap;">
+      <h2 style="margin:0; flex:1;">${recipe.name}</h2>
+      <button class="button small secondary" onclick="editRecipe(${recipe.id})">Edit</button>
     </div>
     
     ${recipe.category ? `<div class="small-note" style="margin-bottom:16px;">Category: ${recipe.category}</div>` : ''}
@@ -406,6 +410,7 @@ async function deleteRecipe() {
   selectedRecipeId = null;
   await loadData();
   renderRecipes();
+  closeModal('modalRecipeEditor');
   $('recipeDetail').innerHTML = '<div style="text-align:center; padding:40px; color:var(--muted);"><p>Select a recipe to view details</p></div>';
 }
 
@@ -415,8 +420,6 @@ async function importRecipeJson() {
   
   try {
     const data = JSON.parse(jsonText);
-    
-    // Check if it's an array of recipes or a single recipe
     const recipesToImport = Array.isArray(data) ? data : [data];
     
     let imported = 0;
@@ -431,14 +434,12 @@ async function importRecipeJson() {
         created: new Date().toISOString()
       };
       
-      // Check if recipe already exists (by name)
       const exists = recipes.find(r => normalizeText(r.name) === normalizeText(recipe.name));
       if (exists) {
         skipped++;
         continue;
       }
       
-      // Parse ingredients
       if (Array.isArray(recipeData.ingredients)) {
         recipe.ingredients = recipeData.ingredients.map(ing => {
           if (typeof ing === 'string') {
@@ -454,7 +455,6 @@ async function importRecipeJson() {
         }).filter(i => i.name);
       }
       
-      // Parse instructions
       if (Array.isArray(recipeData.directions)) {
         recipe.instructions = recipeData.directions.join('\n\n');
       } else if (Array.isArray(recipeData.instructions)) {
@@ -488,103 +488,164 @@ async function importRecipeJson() {
 
 // ===== PANTRY =====
 function renderPantry() {
-const list = $('pantryList');
-list.innerHTML = '';
-
-const searchTerm = normalizeText($('pantrySearch').value);
-const sortType = $('pantrySort').value;
-
-let filtered = pantry.slice();
-
-if (searchTerm) {
-filtered = filtered.filter(p => normalizeText(p.name).includes(searchTerm));
-}
-
-if (sortType === 'alpha') {
-filtered.sort((a, b) => a.name.localeCompare(b.name));
-} else if (sortType === 'available') {
-filtered.sort((a, b) => {
-if (a.available && !b.available) return -1;
-if (!a.available && b.available) return 1;
-return a.name.localeCompare(b.name);
-});
-}
-
-if (filtered.length === 0) { list.innerHTML = '<div class="small-note" style="padding:20px; text-align:center;">No pantry items. Click "+ Add Item" to get started.</div>'; return; }
-
-filtered.forEach(item => {
-const div = document.createElement('div');
-div.className = 'checkbox-item';
-
-const isInShopping = shopping.some(s => normalizeText(s.name) === normalizeText(item.name));
-
-div.innerHTML = `
-  <input type="checkbox" id="pantry-${item.id}" ${item.available ? 'checked' : ''}>
-  <label for="pantry-${item.id}">${item.name}</label>
-  <div class="item-actions">
-    ${isInShopping ? 
-      '<span class="badge" style="font-size:10px;">In Shopping</span>' : 
-      '<button class="button small secondary" onclick="addPantryToShopping('+item.id+')">→ Shop</button>'
+  const list = $('pantryList');
+  list.innerHTML = '';
+  
+  const searchTerm = normalizeText($('pantrySearch').value);
+  const sortType = $('pantrySort').value;
+  
+  let filtered = pantry.slice();
+  
+  if (searchTerm) {
+    filtered = filtered.filter(p => normalizeText(p.name).includes(searchTerm));
+  }
+  
+  if (sortType === 'alpha') {
+    filtered.sort((a, b) => a.name.localeCompare(b.name));
+  } else if (sortType === 'available') {
+    filtered.sort((a, b) => {
+      if (a.available && !b.available) return -1;
+      if (!a.available && b.available) return 1;
+      return a.name.localeCompare(b.name);
+    });
+  }
+  
+  if (filtered.length === 0) {
+    list.innerHTML = '<div class="small-note" style="padding:20px; text-align:center;">No pantry items. Click "+ Add Item" to get started.</div>';
+    return;
+  }
+  
+  filtered.forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'checkbox-item';
+    
+    const isInShopping = shopping.some(s => normalizeText(s.name) === normalizeText(item.name));
+    
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.id = `pantry-${item.id}`;
+    checkbox.checked = item.available || false;
+    checkbox.onchange = async () => {
+      item.available = checkbox.checked;
+      await idbPut('pantry', item);
+      renderRecipes();
+    };
+    
+    const label = document.createElement('label');
+    label.htmlFor = `pantry-${item.id}`;
+    label.textContent = item.name;
+    
+    const actions = document.createElement('div');
+    actions.className = 'item-actions';
+    
+    if (isInShopping) {
+      const badge = document.createElement('span');
+      badge.className = 'badge';
+      badge.style.fontSize = '10px';
+      badge.textContent = 'In Shopping';
+      actions.appendChild(badge);
+    } else {
+      const shopBtn = document.createElement('button');
+      shopBtn.className = 'button small secondary';
+      shopBtn.textContent = '→ Shop';
+      shopBtn.onclick = () => addPantryToShopping(item.id);
+      actions.appendChild(shopBtn);
     }
-    <button class="button small danger" onclick="deletePantryItem('+item.id+')">Delete</button>
-  </div>
-`;
-
-const checkbox = div.querySelector('input[type="checkbox"]');
-checkbox.onchange = async () => {
-  item.available = checkbox.checked;
-  await idbPut('pantry', item);
-  renderRecipes(); // Update recipe availability badges
-};
-
-list.appendChild(div);
-
-});
+    
+    const editBtn = document.createElement('button');
+    editBtn.className = 'button small secondary';
+    editBtn.textContent = 'Edit';
+    editBtn.onclick = () => openEditPantry(item.id);
+    actions.appendChild(editBtn);
+    
+    const delBtn = document.createElement('button');
+    delBtn.className = 'button small danger';
+    delBtn.textContent = 'Delete';
+    delBtn.onclick = () => deletePantryItem(item.id);
+    actions.appendChild(delBtn);
+    
+    div.appendChild(checkbox);
+    div.appendChild(label);
+    div.appendChild(actions);
+    list.appendChild(div);
+  });
 }
 
 async function savePantryItem() {
-const name = $('newPantryName').value.trim();
-if (!name) return alert('Please enter an item name');
-
-// Check if already exists
-const exists = pantry.find(p => normalizeText(p.name) === normalizeText(name));
-if (exists) {
-alert('This item already exists in your pantry');
-return;
+  const name = $('newPantryName').value.trim();
+  if (!name) return alert('Please enter an item name');
+  
+  const exists = pantry.find(p => normalizeText(p.name) === normalizeText(name));
+  if (exists) {
+    alert('This item already exists in your pantry');
+    return;
+  }
+  
+  const item = {
+    name,
+    available: true
+  };
+  
+  await idbPut('pantry', item);
+  await loadData();
+  renderPantry();
+  closeModal('modalAddPantry');
+  $('newPantryName').value = '';
 }
 
-const item = {
-name,
-available: true
-};
+function openEditPantry(id) {
+  const item = pantry.find(p => p.id === id);
+  if (!item) return;
+  
+  editingPantryId = id;
+  $('editPantryName').value = item.name;
+  openModal('modalEditPantry');
+}
 
-await idbPut('pantry', item);
-await loadData();
-renderPantry();
-closeModal('modalAddPantry');
-$('newPantryName').value = '';
+async function updatePantryItem() {
+  if (!editingPantryId) return;
+  
+  const name = $('editPantryName').value.trim();
+  if (!name) return alert('Please enter an item name');
+  
+  const item = pantry.find(p => p.id === editingPantryId);
+  if (!item) return;
+  
+  const exists = pantry.find(p => p.id !== editingPantryId && normalizeText(p.name) === normalizeText(name));
+  if (exists) {
+    alert('An item with this name already exists');
+    return;
+  }
+  
+  item.name = name;
+  await idbPut('pantry', item);
+  await loadData();
+  renderPantry();
+  renderRecipes();
+  closeModal('modalEditPantry');
+  editingPantryId = null;
 }
 
 async function deletePantryItem(id) {
-if (!confirm('Delete this pantry item?')) return;
-await idbDelete('pantry', id);
-await loadData();
-renderPantry();
-renderRecipes();
+  if (!confirm('Delete this pantry item?')) return;
+  
+  await idbDelete('pantry', id);
+  await loadData();
+  renderPantry();
+  renderRecipes();
 }
 
 async function addPantryToShopping(pantryId) {
-const item = pantry.find(p => p.id === pantryId);
-if (!item) return;
-
-// Check if already in shopping
-const exists = shopping.find(s => normalizeText(s.name) === normalizeText(item.name));
-if (exists) return;
-
-await idbPut('shopping', { name: item.name });
-await loadData();
-renderPantry();
-renderShopping();
+  const item = pantry.find(p => p.id === pantryId);
+  if (!item) return;
+  
+  const exists = shopping.find(s => normalizeText(s.name) === normalizeText(item.name));
+  if (exists) return;
+  
+  await idbPut('shopping', { name: item.name });
+  await loadData();
+  renderPantry();
+  renderShopping();
 }
 
 async function importPantryList() {
@@ -611,7 +672,6 @@ async function importPantryList() {
       let skipped = 0;
       
       for (const name of lines) {
-        // Check if already exists
         const exists = pantry.find(p => normalizeText(p.name) === normalizeText(name));
         if (exists) {
           skipped++;
@@ -638,137 +698,148 @@ async function importPantryList() {
 
 // ===== SHOPPING LIST =====
 function renderShopping() {
-const list = $('shoppingList');
-list.innerHTML = '';
-
-if (shopping.length === 0) { list.innerHTML = '<div class="small-note" style="padding:20px; text-align:center;">No items in shopping list</div>'; return; }
-
-shopping.forEach(item => {
-const div = document.createElement('div');
-div.className = 'checkbox-item';
-
-div.innerHTML = `
-  <label style="flex:1;">${item.name}</label>
-  <div class="item-actions">
-    <button class="button small" onclick="markPurchased(${item.id})">Purchased</button>
-    <button class="button small danger" onclick="deleteShoppingItem(${item.id})">Remove</button>
-  </div>
-`;
-
-list.appendChild(div);
-
-});
+  const list = $('shoppingList');
+  list.innerHTML = '';
+  
+  if (shopping.length === 0) {
+    list.innerHTML = '<div class="small-note" style="padding:20px; text-align:center;">No items in shopping list</div>';
+    return;
+  }
+  
+  shopping.forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'checkbox-item';
+    
+    const label = document.createElement('label');
+    label.style.flex = '1';
+    label.textContent = item.name;
+    
+    const actions = document.createElement('div');
+    actions.className = 'item-actions';
+    
+    const purchaseBtn = document.createElement('button');
+    purchaseBtn.className = 'button small';
+    purchaseBtn.textContent = 'Purchased';
+    purchaseBtn.onclick = () => markPurchased(item.id);
+    
+    const removeBtn = document.createElement('button');
+    removeBtn.className = 'button small danger';
+    removeBtn.textContent = 'Remove';
+    removeBtn.onclick = () => deleteShoppingItem(item.id);
+    
+    actions.appendChild(purchaseBtn);
+    actions.appendChild(removeBtn);
+    div.appendChild(label);
+    div.appendChild(actions);
+    list.appendChild(div);
+  });
 }
 
 async function saveShoppingItem() {
-const name = $('newShoppingName').value.trim();
-if (!name) return alert('Please enter an item name');
-
-await idbPut('shopping', { name });
-await loadData();
-renderShopping();
-closeModal('modalAddShopping');
-$('newShoppingName').value = '';
+  const name = $('newShoppingName').value.trim();
+  if (!name) return alert('Please enter an item name');
+  
+  await idbPut('shopping', { name });
+  await loadData();
+  renderShopping();
+  closeModal('modalAddShopping');
+  $('newShoppingName').value = '';
 }
 
 async function deleteShoppingItem(id) {
-await idbDelete('shopping', id);
-await loadData();
-renderShopping();
-renderPantry();
+  await idbDelete('shopping', id);
+  await loadData();
+  renderShopping();
+  renderPantry();
 }
 
 async function markPurchased(id) {
-const item = shopping.find(s => s.id === id);
-if (!item) return;
-
-// Add to pantry if not exists, or mark as available if exists
-let pantryItem = pantry.find(p => normalizeText(p.name) === normalizeText(item.name));
-
-if (pantryItem) {
-pantryItem.available = true;
-await idbPut('pantry', pantryItem);
-} else {
-await idbPut('pantry', { name: item.name, available: true });
-}
-
-// Remove from shopping
-await idbDelete('shopping', id);
-await loadData();
-renderShopping();
-renderPantry();
-renderRecipes();
+  const item = shopping.find(s => s.id === id);
+  if (!item) return;
+  
+  let pantryItem = pantry.find(p => normalizeText(p.name) === normalizeText(item.name));
+  
+  if (pantryItem) {
+    pantryItem.available = true;
+    await idbPut('pantry', pantryItem);
+  } else {
+    await idbPut('pantry', { name: item.name, available: true });
+  }
+  
+  await idbDelete('shopping', id);
+  await loadData();
+  renderShopping();
+  renderPantry();
+  renderRecipes();
 }
 
 async function markAllPurchased() {
-if (shopping.length === 0) return;
-if (!confirm('Mark all items as purchased?')) return;
-
-for (const item of shopping) {
-let pantryItem = pantry.find(p => normalizeText(p.name) === normalizeText(item.name));
-
-if (pantryItem) {
-  pantryItem.available = true;
-  await idbPut('pantry', pantryItem);
-} else {
-  await idbPut('pantry', { name: item.name, available: true });
-}
-
-}
-
-await idbClear('shopping');
-await loadData();
-renderShopping();
-renderPantry();
-renderRecipes();
+  if (shopping.length === 0) return;
+  if (!confirm('Mark all items as purchased?')) return;
+  
+  for (const item of shopping) {
+    let pantryItem = pantry.find(p => normalizeText(p.name) === normalizeText(item.name));
+    
+    if (pantryItem) {
+      pantryItem.available = true;
+      await idbPut('pantry', pantryItem);
+    } else {
+      await idbPut('pantry', { name: item.name, available: true });
+    }
+  }
+  
+  await idbClear('shopping');
+  await loadData();
+  renderShopping();
+  renderPantry();
+  renderRecipes();
 }
 
 async function clearShopping() {
-if (shopping.length === 0) return;
-if (!confirm('Clear entire shopping list?')) return;
-
-await idbClear('shopping');
-await loadData();
-renderShopping();
-renderPantry();
+  if (shopping.length === 0) return;
+  if (!confirm('Clear entire shopping list?')) return;
+  
+  await idbClear('shopping');
+  await loadData();
+  renderShopping();
+  renderPantry();
 }
 
 // ===== WEEKLY PLANNER =====
 function getWeekDays() {
-const today = new Date();
-const day = (today.getDay() + 6) % 7; // Monday = 0
-const monday = new Date(today);
-monday.setDate(today.getDate() - day);
-
-const days = [];
-for (let i = 0; i < 7; i++) {
-const d = new Date(monday);
-d.setDate(monday.getDate() + i);
-days.push({
-date: d.toISOString().split('T')[0],
-name: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'][i]
-});
-}
-return days;
+  const today = new Date();
+  const day = (today.getDay() + 6) % 7;
+  const monday = new Date(today);
+  monday.setDate(today.getDate() - day);
+  
+  const days = [];
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(monday);
+    d.setDate(monday.getDate() + i);
+    days.push({
+      date: d.toISOString().split('T')[0],
+      name: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'][i]
+    });
+  }
+  return days;
 }
 
 function renderPlanner() {
-const calendar = $('plannerCalendar');
-calendar.innerHTML = '';
-
-const days = getWeekDays();
-const meals = ['Breakfast', 'Lunch', 'Dinner'];
-
-days.forEach(day => {
-const dayDiv = document.createElement('div');
-dayDiv.className = 'day';
-
-const header = document.createElement('div');
-header.className = 'day-header';
-header.textContent = `${day.name} ${day.date.split('-')[2]}`;
-dayDiv.appendChild(header);
-
-meals.forEach(meal => {
+  const calendar = $('plannerCalendar');
+  calendar.innerHTML = '';
+  
+  const days = getWeekDays();
+  const meals = ['Breakfast', 'Lunch', 'Dinner'];
+  
+  days.forEach(day => {
+    const dayDiv = document.createElement('div');
+    dayDiv.className = 'day';
+    
+    const header = document.createElement('div');
+    header.className = 'day-header';
+    header.textContent = `${day.name} ${day.date.split('-')[2]}`;
+    dayDiv.appendChild(header);
+	meals.forEach(meal => {
   const slotKey = `${day.date}_${meal}`;
   const planned = planner[slotKey];
   
@@ -783,73 +854,94 @@ meals.forEach(meal => {
     slot.textContent = meal;
   }
   
-  slot.onclick = () => planMeal(slotKey);
-  slot.ondblclick = () => removePlannedMeal(slotKey);
+  slot.onclick = () => openPlanMealModal(slotKey);
   
   dayDiv.appendChild(slot);
 });
 
 calendar.appendChild(dayDiv);
-
 });
 }
-
-async function planMeal(slotKey) {
+function openPlanMealModal(slotKey) {
+currentPlanSlot = slotKey;
 const existing = planner[slotKey];
-
 if (existing) {
-const action = prompt('Enter "remove" to remove, or type a new recipe name to change:');
-if (!action) return;
-
-if (action.toLowerCase() === 'remove') {
-  await removePlannedMeal(slotKey);
-  return;
-}
-
-const recipe = recipes.find(r => normalizeText(r.name).includes(normalizeText(action)));
-if (!recipe) {
-  alert('Recipe not found');
-  return;
-}
-
-planner[slotKey] = { slot: slotKey, recipeId: recipe.id };
-await idbPut('planner', planner[slotKey]);
-renderPlanner();
-
+$('planMealTitle').textContent = 'Change Meal';
+$('btnRemovePlanMeal').style.display = 'inline-block';
 } else {
-const name = prompt('Enter recipe name to add:');
-if (!name) return;
-
-const recipe = recipes.find(r => normalizeText(r.name).includes(normalizeText(name)));
-if (!recipe) {
-  alert('Recipe not found');
-  return;
+$('planMealTitle').textContent = 'Add Meal';
+$('btnRemovePlanMeal').style.display = 'none';
 }
-
-planner[slotKey] = { slot: slotKey, recipeId: recipe.id };
-await idbPut('planner', planner[slotKey]);
+$('planMealSearch').value = '';
+populatePlanMealList();
+openModal('modalPlanMeal');
+}
+function populatePlanMealList(filter = '') {
+const select = $('planMealSelect');
+select.innerHTML = '';
+const filterLower = normalizeText(filter);
+let sorted = recipes.slice();
+const makeable = [];
+const notMakeable = [];
+sorted.forEach(r => {
+if (filter && !normalizeText(r.name).includes(filterLower)) return;
+if (canMakeRecipe(r)) {
+  makeable.push(r);
+} else {
+  notMakeable.push(r);
+}
+});
+makeable.sort((a, b) => a.name.localeCompare(b.name));
+notMakeable.sort((a, b) => a.name.localeCompare(b.name));
+makeable.forEach(r => {
+const option = document.createElement('option');
+option.value = r.id;
+option.textContent = `✓ ${r.name}`;
+option.style.color = '#86efac';
+select.appendChild(option);
+});
+if (makeable.length > 0 && notMakeable.length > 0) {
+const separator = document.createElement('option');
+separator.disabled = true;
+separator.textContent = '─────────────';
+select.appendChild(separator);
+}
+notMakeable.forEach(r => {
+const option = document.createElement('option');
+option.value = r.id;
+option.textContent = `  ${r.name}`;
+select.appendChild(option);
+});
+}
+function filterPlanMealList() {
+const filter = $('planMealSearch').value;
+populatePlanMealList(filter);
+}
+async function confirmPlanMeal() {
+const select = $('planMealSelect');
+const selectedId = parseInt(select.value);
+if (!selectedId || !currentPlanSlot) return;
+planner[currentPlanSlot] = { slot: currentPlanSlot, recipeId: selectedId };
+await idbPut('planner', planner[currentPlanSlot]);
 renderPlanner();
-
+closeModal('modalPlanMeal');
+currentPlanSlot = null;
 }
-}
-
-async function removePlannedMeal(slotKey) {
-if (!planner[slotKey]) return;
-
-await idbDelete('planner', slotKey);
-delete planner[slotKey];
+async function removePlannedMealFromModal() {
+if (!currentPlanSlot || !planner[currentPlanSlot]) return;
+await idbDelete('planner', currentPlanSlot);
+delete planner[currentPlanSlot];
 renderPlanner();
+closeModal('modalPlanMeal');
+currentPlanSlot = null;
 }
-
 async function clearPlanner() {
 if (Object.keys(planner).length === 0) return;
 if (!confirm('Clear all planned meals for this week?')) return;
-
 await idbClear('planner');
 planner = {};
 renderPlanner();
 }
-
 // ===== IMPORT/EXPORT =====
 function exportAllData() {
 const data = {
@@ -859,38 +951,36 @@ shopping,
 planner: Object.values(planner),
 exported: new Date().toISOString()
 };
-
 const json = JSON.stringify(data, null, 2);
 const blob = new Blob([json], { type: 'application/json' });
 const url = URL.createObjectURL(blob);
-
-const a = document.createElement('a'); a.href = url; a.download = `kitchen-pantrypal-${Date.now()}.json`; a.click(); URL.revokeObjectURL(url); }
-
+const a = document.createElement('a');
+a.href = url;
+a.download = 'kitchen-pantrypal-${Date.now()}.json';
+a.click();
+URL.revokeObjectURL(url);
+}
 async function importAllData() {
 const input = document.createElement('input');
 input.type = 'file';
 input.accept = '.json';
-
 input.onchange = async (e) => {
 const file = e.target.files[0];
 if (!file) return;
-
 try {
   const text = await file.text();
   const data = JSON.parse(text);
   
   if (!confirm('This will replace all your current data. Continue?')) return;
   
-  // Clear existing data
   await idbClear('pantry');
   await idbClear('recipes');
   await idbClear('shopping');
   await idbClear('planner');
   
-  // Import new data
   if (Array.isArray(data.pantry)) {
     for (const item of data.pantry) {
-      delete item.id; // Let DB generate new IDs
+      delete item.id;
       await idbPut('pantry', item);
     }
   }
@@ -921,16 +1011,14 @@ try {
   renderShopping();
   renderPlanner();
   
-alert('Data imported successfully!');
-      
-    } catch (err) {
-      alert('Error importing data. Please check the file format.');
-      console.error(err);
-    }
-  };
+  alert('Data imported successfully!');
   
-  input.click();
+} catch (err) {
+  alert('Error importing data. Please check the file format.');
+  console.error(err);
 }
-
+};
+input.click();
+}
 // Start the app
 init();

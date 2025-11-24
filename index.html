@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="header">
-    <div class="brand">🥘 Kitchen PantryPal</div>
+    <img src="logo.png" alt="Kitchen PantryPal" class="logo">
     <div class="actions">
       <button id="btnExport" class="button small secondary">Export Data</button>
       <button id="btnImport" class="button small secondary">Import Data</button>
@@ -56,7 +56,7 @@
     <!-- PANTRY TAB -->
     <section id="tab-pantry" class="tab-content">
       <div class="card">
-        <div class="hstack" style="margin-bottom:16px;">
+        <div class="hstack" style="margin-bottom:16px; flex-wrap:wrap;">
           <h3 style="margin:0;">Pantry Items</h3>
           <input id="pantrySearch" class="input" placeholder="Filter items..." style="max-width:250px; margin-left:auto;"/>
           <select id="pantrySort" class="input" style="max-width:150px;">
@@ -64,16 +64,16 @@
             <option value="available">Available First</option>
           </select>
           <button id="btnAddPantryItem" class="button small">+ Add Item</button>
-		  <button id="btnImportPantryList" class="button small secondary">Import List</button>
+          <button id="btnImportPantryList" class="button small secondary">Import List</button>
         </div>
-        <div id="pantryList"></div>
+        <div id="pantryList" class="pantry-grid"></div>
       </div>
     </section>
 
     <!-- SHOPPING LIST TAB -->
     <section id="tab-shopping" class="tab-content">
       <div class="card">
-        <div class="hstack" style="margin-bottom:16px;">
+        <div class="hstack" style="margin-bottom:16px; flex-wrap:wrap;">
           <h3 style="margin:0;">Shopping List</h3>
           <button id="btnAddShoppingItem" class="button small" style="margin-left:auto;">+ Add Item</button>
           <button id="btnMarkAllPurchased" class="button small">Mark All Purchased</button>
@@ -86,7 +86,7 @@
     <!-- WEEKLY PLANNER TAB -->
     <section id="tab-planner" class="tab-content">
       <div class="card">
-        <div class="hstack" style="margin-bottom:16px;">
+        <div class="hstack" style="margin-bottom:16px; flex-wrap:wrap;">
           <h3 style="margin:0;">Weekly Meal Planner</h3>
           <div class="small-note" style="margin-left:12px;">Click slots to add meals</div>
           <button id="btnClearPlanner" class="button small danger" style="margin-left:auto;">Clear Week</button>
@@ -105,6 +105,19 @@
         <div class="hstack">
           <button id="btnSavePantry" class="button">Save</button>
           <button id="btnCancelPantry" class="button secondary">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalEditPantry" class="modal">
+    <div class="modal-content">
+      <h3>Edit Pantry Item</h3>
+      <div class="vstack">
+        <input id="editPantryName" class="input" placeholder="Item name"/>
+        <div class="hstack">
+          <button id="btnUpdatePantry" class="button">Update</button>
+          <button id="btnCancelEditPantry" class="button secondary">Cancel</button>
         </div>
       </div>
     </div>
@@ -155,6 +168,23 @@
       </div>
     </div>
   </div>
+
+  <div id="modalPlanMeal" class="modal">
+    <div class="modal-content">
+      <h3 id="planMealTitle">Add Meal</h3>
+      <div class="vstack">
+        <input id="planMealSearch" class="input" placeholder="Type to search recipes..." autocomplete="off"/>
+        <select id="planMealSelect" class="input" size="10" style="height:300px;">
+        </select>
+        <div class="hstack">
+          <button id="btnConfirmPlanMeal" class="button">Add to Plan</button>
+          <button id="btnCancelPlanMeal" class="button secondary">Cancel</button>
+          <button id="btnRemovePlanMeal" class="button danger" style="display:none;">Remove</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="PantryPal_Scripts.js"></script>
 </body>
 </html>
