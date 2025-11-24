@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Kitchen PantryPal</title>
+<link rel="stylesheet" href="PantryPal_Styles.css">
+<meta name="theme-color" content="#0f172a">
+</head>
+<body>
+  <div class="header">
+    <div class="brand">🥘 Kitchen PantryPal</div>
+    <div class="actions">
+      <button id="btnExport" class="button small secondary">Export Data</button>
+      <button id="btnImport" class="button small secondary">Import Data</button>
+    </div>
+  </div>
+
+  <div class="tabs-container">
+    <div class="tab active" data-tab="recipes">📖 Recipes</div>
+    <div class="tab" data-tab="pantry">🥫 Pantry</div>
+    <div class="tab" data-tab="shopping">🛒 Shopping List</div>
+    <div class="tab" data-tab="planner">📅 Weekly Planner</div>
+  </div>
+
+  <main class="main">
+    <!-- RECIPES TAB -->
+    <section id="tab-recipes" class="tab-content active">
+      <div class="card">
+        <div class="search-filters">
+          <input id="recipeSearch" class="input" placeholder="Search recipes by name or ingredient..." style="flex:2; min-width:200px;"/>
+          <select id="recipeFilter" class="input" style="flex:1; min-width:150px;">
+            <option value="all">All Recipes</option>
+            <option value="available">Can Make Now</option>
+          </select>
+          <button id="btnListAll" class="button small secondary">List All</button>
+          <button id="btnAddRecipe" class="button small">+ Add Recipe</button>
+          <button id="btnImportRecipe" class="button small">Import JSON</button>
+        </div>
+      </div>
+
+      <div class="split-view">
+        <div class="list-panel">
+          <div id="recipesList"></div>
+        </div>
+        <div class="detail-panel">
+          <div id="recipeDetail">
+            <div style="text-align:center; padding:40px; color:var(--muted);">
+              <p>Select a recipe to view details</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANTRY TAB -->
+    <section id="tab-pantry" class="tab-content">
+      <div class="card">
+        <div class="hstack" style="margin-bottom:16px;">
+          <h3 style="margin:0;">Pantry Items</h3>
+          <input id="pantrySearch" class="input" placeholder="Filter items..." style="max-width:250px; margin-left:auto;"/>
+          <select id="pantrySort" class="input" style="max-width:150px;">
+            <option value="alpha">A→Z</option>
+            <option value="available">Available First</option>
+          </select>
+          <button id="btnAddPantryItem" class="button small">+ Add Item</button>
+		  <button id="btnImportPantryList" class="button small secondary">Import List</button>
+        </div>
+        <div id="pantryList"></div>
+      </div>
+    </section>
+
+    <!-- SHOPPING LIST TAB -->
+    <section id="tab-shopping" class="tab-content">
+      <div class="card">
+        <div class="hstack" style="margin-bottom:16px;">
+          <h3 style="margin:0;">Shopping List</h3>
+          <button id="btnAddShoppingItem" class="button small" style="margin-left:auto;">+ Add Item</button>
+          <button id="btnMarkAllPurchased" class="button small">Mark All Purchased</button>
+          <button id="btnClearShopping" class="button small danger">Clear All</button>
+        </div>
+        <div id="shoppingList"></div>
+      </div>
+    </section>
+
+    <!-- WEEKLY PLANNER TAB -->
+    <section id="tab-planner" class="tab-content">
+      <div class="card">
+        <div class="hstack" style="margin-bottom:16px;">
+          <h3 style="margin:0;">Weekly Meal Planner</h3>
+          <div class="small-note" style="margin-left:12px;">Click slots to add meals</div>
+          <button id="btnClearPlanner" class="button small danger" style="margin-left:auto;">Clear Week</button>
+        </div>
+        <div class="calendar" id="plannerCalendar"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODALS -->
+  <div id="modalAddPantry" class="modal">
+    <div class="modal-content">
+      <h3>Add Pantry Item</h3>
+      <div class="vstack">
+        <input id="newPantryName" class="input" placeholder="Item name (e.g., Flour, Eggs, Salt)"/>
+        <div class="hstack">
+          <button id="btnSavePantry" class="button">Save</button>
+          <button id="btnCancelPantry" class="button secondary">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalAddShopping" class="modal">
+    <div class="modal-content">
+      <h3>Add Shopping Item</h3>
+      <div class="vstack">
+        <input id="newShoppingName" class="input" placeholder="Item name"/>
+        <div class="hstack">
+          <button id="btnSaveShopping" class="button">Save</button>
+          <button id="btnCancelShopping" class="button secondary">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalRecipeEditor" class="modal">
+    <div class="modal-content" style="max-width:700px;">
+      <h3 id="recipeEditorTitle">Add Recipe</h3>
+      <div class="vstack">
+        <input id="editRecipeName" class="input" placeholder="Recipe name"/>
+        <input id="editRecipeCategory" class="input" placeholder="Category (optional)"/>
+        <label class="small-note">Ingredients (one per line): quantity unit name OR name|qty|unit</label>
+        <textarea id="editRecipeIngredients" class="input" rows="8" placeholder="e.g. 2 cups flour OR flour|2|cups"></textarea>
+        <label class="small-note">Instructions</label>
+        <textarea id="editRecipeInstructions" class="input" rows="6" placeholder="Cooking directions..."></textarea>
+        <div class="hstack">
+          <button id="btnSaveRecipe" class="button">Save Recipe</button>
+          <button id="btnCancelRecipe" class="button secondary">Cancel</button>
+          <button id="btnDeleteRecipe" class="button danger" style="margin-left:auto; display:none;">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalImportRecipe" class="modal">
+    <div class="modal-content" style="max-width:700px;">
+      <h3>Import Recipe JSON</h3>
+      <div class="vstack">
+        <label class="small-note">Paste JSON recipe data (supports: title, ingredients, directions, category)</label>
+        <textarea id="importRecipeJson" class="input" rows="15" placeholder='{"title": "Recipe Name", "ingredients": [...], "directions": [...], "category": "..."}'></textarea>
+        <div class="hstack">
+          <button id="btnImportRecipeConfirm" class="button">Import</button>
+          <button id="btnCancelImportRecipe" class="button secondary">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="PantryPal_Scripts.js"></script>
+</body>
+</html>
