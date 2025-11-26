@@ -230,9 +230,9 @@ export async function init() {
     await loadData();
     
     // Import and initialize all modules
-    const { bindRecipesUI, renderRecipes } = await import('./recipes.js');
-    const { bindPantryUI, renderPantry } = await import('./pantry.js');
-    const { bindPlannerUI, renderPlanner } = await import('./planner.js');
+    const { bindRecipesUI, renderRecipes } = await import('/recipes.js');
+    const { bindPantryUI, renderPantry } = await import('/pantry.js');
+    const { bindPlannerUI, renderPlanner } = await import('/planner.js');
     
     bindUI();
     bindRecipesUI();
