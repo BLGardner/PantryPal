@@ -6,7 +6,7 @@ import {
   idbPut, idbDelete, loadData, 
   normalizeText, parseIngredientLine,
   openModal, closeModal
-} from 'app.js';
+} from './app.js';
 
 // Make selectedRecipeId mutable
 let _selectedRecipeId = null;

@@ -6,9 +6,9 @@ import {
   idbPut, idbDelete, idbClear, loadData,
   normalizeText,
   openModal, closeModal
-} from 'app.js';
+} from './app.js';
 
-import { canMakeRecipe } from 'recipes.js';
+import { canMakeRecipe } from './recipes.js';
 
 // Local state
 let currentPlanSlot = null;

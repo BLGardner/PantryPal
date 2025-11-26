@@ -6,9 +6,9 @@ import {
   idbPut, idbDelete, idbClear, loadData, 
   normalizeText,
   openModal, closeModal
-} from 'app.js';
+} from './app.js';
 
-import { renderRecipes } from 'recipes.js';
+import { renderRecipes } from './recipes.js';
 
 // Local state for editing
 let editingPantryId = null;
