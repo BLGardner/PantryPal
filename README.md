@@ -42,11 +42,9 @@ A powerful, mobile-first web app for managing your pantry, recipes, shopping lis
 
 ### Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/BLGardner/PantryPal.git
-cd kitchen-pantrypal
-```
+1. Download the index.html and any other optional files...
+   - get_started.json is a starter recipe/pantry list you can import to get started.
+   - favicon.ico, the icon displayed in the browser tab. 
 
 2. Open `index.html` in your web browser
 
@@ -85,13 +83,7 @@ Kitchen PantryPal is designed with mobile-first principles:
 ```
 kitchen-pantrypal/
 ├── index.html          # Main HTML structure
-├── styles.css          # All styling and responsive design
-├── app.js              # Core app logic, database, utilities
-├── recipes.js          # Recipe management and import
-├── pantry.js           # Pantry and shopping list
-├── planner.js          # Weekly meal planner
-├── normalize.js        # Ingredient normalization engine
-├── logo.png            # App logo
+├── get_started.json    # Starter Recipes and Pantry Ingredients
 ├── favicon.ico         # Browser favicon
 └── README.md           # This file
 ```
@@ -121,41 +113,21 @@ Mix ingredients...
 (Use --- to separate multiple recipes)
 ```
 
-## 🔧 Customization
-
-The app is highly customizable:
-- Edit `styles.css` to change colors and spacing
-- Modify `COMMON_QUANTITIES` and `COMMON_UNITS` in `recipes.js` for different suggestions
-- Update the bookmarklet code for different recipe extraction patterns
-
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please feel free to Donate...
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
+https://www.paypal.com/paypalme/BLGApps
 
 ## 🐛 Known Issues
 
-- Recipe-Clipper works best on recipe websites with standard formatting
-- Some websites may require manual cleanup after extraction
+- Recipe-Clipper works best on recipes displayed in printable format.
+- Some websites may require manual cleanup after extraction.
 - Browser storage limits apply (typically 50MB+)
 
 ## 🚧 Roadmap
 
-- [ ] Recipe scaling (2x, 0.5x servings)
-- [ ] Nutrition information tracking
-- [ ] Recipe ratings and notes
-- [ ] Print-friendly recipe cards
 - [ ] Dark/light theme toggle
-- [ ] Multi-language support
 
 ## 💡 Tips
 
