@@ -1,0 +1,2014 @@
+{
+  "pantry": [
+    {
+      "name": "all-purpose flour",
+      "available": false
+    },
+    {
+      "name": "almonds",
+      "available": false
+    },
+    {
+      "name": "apple cider vinegar",
+      "available": false
+    },
+    {
+      "name": "apples",
+      "available": false
+    },
+    {
+      "name": "avocado",
+      "available": false
+    },
+    {
+      "name": "bacon",
+      "available": false
+    },
+    {
+      "name": "bacon bits",
+      "available": false
+    },
+    {
+      "name": "Baking chips",
+      "available": false
+    },
+    {
+      "name": "baking powder",
+      "available": false
+    },
+    {
+      "name": "baking soda",
+      "available": false
+    },
+    {
+      "name": "black olives",
+      "available": false
+    },
+    {
+      "name": "Black olives",
+      "available": false
+    },
+    {
+      "name": "blueberries",
+      "available": false
+    },
+    {
+      "name": "brown sugar",
+      "available": false
+    },
+    {
+      "name": "Brown sugar",
+      "available": false
+    },
+    {
+      "name": "Brown Sugar",
+      "available": false
+    },
+    {
+      "name": "Butter",
+      "available": false
+    },
+    {
+      "name": "butter",
+      "available": false
+    },
+    {
+      "name": "cane sugar",
+      "available": false
+    },
+    {
+      "name": "canola oil",
+      "available": false
+    },
+    {
+      "name": "Cheddar cheese",
+      "available": false
+    },
+    {
+      "name": "cheddar cheese",
+      "available": false
+    },
+    {
+      "name": "Cheese",
+      "available": false
+    },
+    {
+      "name": "chicken breasts",
+      "available": false
+    },
+    {
+      "name": "Chicken Broth",
+      "available": false
+    },
+    {
+      "name": "chives",
+      "available": false
+    },
+    {
+      "name": "cinnamon",
+      "available": false
+    },
+    {
+      "name": "coconut oil",
+      "available": false
+    },
+    {
+      "name": "Cooking Spray",
+      "available": false
+    },
+    {
+      "name": "corn syrup",
+      "available": false
+    },
+    {
+      "name": "cornmeal",
+      "available": false
+    },
+    {
+      "name": "cornstarch",
+      "available": false
+    },
+    {
+      "name": "Cornstarch",
+      "available": false
+    },
+    {
+      "name": "cream cheese",
+      "available": false
+    },
+    {
+      "name": "cream of Chicken soup",
+      "available": false
+    },
+    {
+      "name": "cream of tartar",
+      "available": false
+    },
+    {
+      "name": "cucumber",
+      "available": false
+    },
+    {
+      "name": "dark chocolate",
+      "available": false
+    },
+    {
+      "name": "diced Onion",
+      "available": false
+    },
+    {
+      "name": "dijon mustard",
+      "available": false
+    },
+    {
+      "name": "Dry Yeast",
+      "available": false
+    },
+    {
+      "name": "Eggs",
+      "available": false
+    },
+    {
+      "name": "eggs",
+      "available": false
+    },
+    {
+      "name": "flour tortillas",
+      "available": false
+    },
+    {
+      "name": "Garlic",
+      "available": false
+    },
+    {
+      "name": "garlic powder",
+      "available": false
+    },
+    {
+      "name": "ginger",
+      "available": false
+    },
+    {
+      "name": "Greek yogurt",
+      "available": false
+    },
+    {
+      "name": "greek yogurt",
+      "available": false
+    },
+    {
+      "name": "green chilies",
+      "available": false
+    },
+    {
+      "name": "green onion",
+      "available": false
+    },
+    {
+      "name": "green onions",
+      "available": false
+    },
+    {
+      "name": "ground cinnamon",
+      "available": false
+    },
+    {
+      "name": "ham",
+      "available": false
+    },
+    {
+      "name": "honey",
+      "available": false
+    },
+    {
+      "name": "Honey mustard",
+      "available": false
+    },
+    {
+      "name": "iceberg lettuce",
+      "available": false
+    },
+    {
+      "name": "Iceberg Lettuce",
+      "available": false
+    },
+    {
+      "name": "jalapeno peppers",
+      "available": false
+    },
+    {
+      "name": "Lemon juice",
+      "available": false
+    },
+    {
+      "name": "lemon juice",
+      "available": false
+    },
+    {
+      "name": "milk",
+      "available": false
+    },
+    {
+      "name": "mixed vegetables",
+      "available": false
+    },
+    {
+      "name": "molasses",
+      "available": false
+    },
+    {
+      "name": "oat flour",
+      "available": false
+    },
+    {
+      "name": "onion",
+      "available": false
+    },
+    {
+      "name": "oranges",
+      "available": false
+    },
+    {
+      "name": "Parsley",
+      "available": false
+    },
+    {
+      "name": "peanut butter",
+      "available": false
+    },
+    {
+      "name": "Peanut butter",
+      "available": false
+    },
+    {
+      "name": "pecans",
+      "available": false
+    },
+    {
+      "name": "Pepper",
+      "available": false
+    },
+    {
+      "name": "pepper",
+      "available": false
+    },
+    {
+      "name": "pie crust",
+      "available": false
+    },
+    {
+      "name": "Pineapple",
+      "available": false
+    },
+    {
+      "name": "powdered sugar",
+      "available": false
+    },
+    {
+      "name": "pumpkin",
+      "available": false
+    },
+    {
+      "name": "Ranch Seasoning",
+      "available": false
+    },
+    {
+      "name": "refried beans",
+      "available": false
+    },
+    {
+      "name": "salsa",
+      "available": false
+    },
+    {
+      "name": "salt",
+      "available": false
+    },
+    {
+      "name": "Salt",
+      "available": false
+    },
+    {
+      "name": "sea salt",
+      "available": false
+    },
+    {
+      "name": "season salt",
+      "available": false
+    },
+    {
+      "name": "sharp cheddar",
+      "available": false
+    },
+    {
+      "name": "shortening",
+      "available": false
+    },
+    {
+      "name": "sour cream",
+      "available": false
+    },
+    {
+      "name": "Sour cream",
+      "available": false
+    },
+    {
+      "name": "sugar",
+      "available": false
+    },
+    {
+      "name": "Sweetened condensed milk",
+      "available": false
+    },
+    {
+      "name": "syrup",
+      "available": false
+    },
+    {
+      "name": "taco seasoning",
+      "available": false
+    },
+    {
+      "name": "Taco seasoning",
+      "available": false
+    },
+    {
+      "name": "thyme",
+      "available": false
+    },
+    {
+      "name": "Tomato",
+      "available": false
+    },
+    {
+      "name": "tortillas",
+      "available": false
+    },
+    {
+      "name": "tuna",
+      "available": false
+    },
+    {
+      "name": "vanilla",
+      "available": false
+    },
+    {
+      "name": "vanilla extract",
+      "available": false
+    },
+    {
+      "name": "vegetable oil",
+      "available": false
+    },
+    {
+      "name": "Vinegar",
+      "available": false
+    },
+    {
+      "name": "walnuts",
+      "available": false
+    },
+    {
+      "name": "water",
+      "available": false
+    },
+    {
+      "name": "White bread",
+      "available": false
+    },
+    {
+      "name": "white sugar",
+      "available": false
+    },
+    {
+      "name": "White sugar",
+      "available": false
+    },
+    {
+      "name": "zucchini",
+      "available": false
+    }
+  ],
+  "recipes": [
+    {
+      "name": "Stuffed, Bacon Wrapped Chicken Breasts",
+      "category": "Main Dish",
+      "ingredients": [
+        {
+          "qty": "2",
+          "unit": "ea",
+          "name": "chicken breasts",
+          "detail": "boneless, skinless"
+        },
+        {
+          "qty": "8",
+          "unit": "slices",
+          "name": "bacon"
+        },
+        {
+          "qty": "1/2",
+          "unit": "Lb",
+          "name": "Cheese",
+          "detail": "of your choice (See variations below)"
+        },
+        {
+          "qty": "2",
+          "unit": "Tbs",
+          "name": "Brown Sugar"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "Salt",
+          "detail": "to taste"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "Pepper",
+          "detail": "to taste"
+        }
+      ],
+      "instructions": "1. Soak about 8 toothpicks in warm water (so they don't burn easily)\n2. Preheat oven to 400, Butterfly cut the chicken breasts, season chicken with a pinch of salt and pepper\n3. Cut the cheese into slices about 1/4 - 3/8\" thick\n4. Place 3 slices of cheese inside each breast and wrap with bacon slices (3-4 per breast, as needed to fully cover).\n5. On the starting piece overlap it to secure, then use toothpicks to secure other pieces through overlapping ends.\n6. Leave the picks sticking out about 1/2 way, they will be used to prop the breasts up when getting the bacon on the bottom cooked.\n7. Once wrapped place on a foil lined baking sheet with raised edges to hold the bacon grease.\n8. Top each with a Tablespoon spoon of brown sugar, pat down onto bacon.\n9. Bake for 30-40 minutes, always keep an eye on it when bacon is getting close to being done!\n10. When the bacon on the top/sides is just about done to your liking roll the breasts over so they rest on the toothpicks, exposing the uncooked bacon on the bottom.\n\nTIPS:\nThin bacon cooks faster and chicken may not get fully cooked, lower temp (350) and cook longer.\nIf some cheese oozes out scoop it up and drizzle over the top.\nIf you have a baking sheet with a wire rack insert you shouldn't need to roll them over to cook the bottom bacon.\n\nVARIATIONS:\nWhite Cheddar Cherry Cheese\nCranberry Cheese\nIf your out of bacon:\nMake a Quick-n-easy pie crust and wrap the breasts with it creating Cheese Stuffed Chicken Wellington...\n - Wellington Chicken prep:\t\nBecause the crust will bake faster than the chicken cut the breasts in half or use two chicken tenders per wrap.\nPan fry in a tablespoon of oil and your choice of seasoning until just starting to brown.\nWrap tenders with cheese on top forming a 'loaf' shape and seal edges with a wet finger.\nCheese will leak if not sealed well.\nBake at 350 until crust is golden brown.\n\nMake a 'Brown sugar glaze' to top it off...\n1/4 cup packed Brown sugar\nCapfull vinegar\nCapfull lemon juice\nA bit of honey mustard if you wish\nHeat until bubbly and drizzle over top of each Wellington!",
+      "created": "2025-12-01T15:11:17.993Z",
+      "id": 2642
+    },
+    {
+      "name": "Brown sugar Glaze",
+      "category": "Sauce / Topping",
+      "ingredients": [
+        {
+          "qty": "1/4",
+          "unit": "cup",
+          "name": "Brown sugar",
+          "detail": "packed"
+        },
+        {
+          "qty": "1",
+          "unit": "Capfull",
+          "name": "Vinegar"
+        },
+        {
+          "qty": "1",
+          "unit": "Capfull",
+          "name": "Lemon juice"
+        },
+        {
+          "qty": "1",
+          "unit": "Tbs",
+          "name": "Honey mustard",
+          "detail": "(if you wish)"
+        }
+      ],
+      "instructions": "Heat until bubbly and drizzle over your dish!",
+      "created": "2025-12-01T15:12:53.319Z",
+      "id": 2643
+    },
+    {
+      "name": "Seven-Layer Taco Dip",
+      "category": "Appetizer",
+      "ingredients": [
+        {
+          "qty": "1",
+          "unit": "can",
+          "name": "refried beans",
+          "detail": "16oz"
+        },
+        {
+          "qty": "1",
+          "unit": "package",
+          "name": "taco seasoning",
+          "detail": "mix 1oz"
+        },
+        {
+          "qty": "1",
+          "unit": "container",
+          "name": "sour cream",
+          "detail": "16oz"
+        },
+        {
+          "qty": "1",
+          "unit": "package",
+          "name": "cream cheese",
+          "detail": "softened 8oz"
+        },
+        {
+          "qty": "1",
+          "unit": "jar",
+          "name": "salsa",
+          "detail": "16oz"
+        },
+        {
+          "qty": "1",
+          "unit": "bunch",
+          "name": "green onions",
+          "detail": "chopped"
+        },
+        {
+          "qty": "1",
+          "unit": "head",
+          "name": "iceberg lettuce",
+          "detail": "shredded"
+        },
+        {
+          "qty": "2",
+          "unit": "cups",
+          "name": "Cheddar cheese",
+          "detail": "shredded"
+        },
+        {
+          "qty": "1",
+          "unit": "can",
+          "name": "black olives",
+          "detail": "sliced, drained 6oz"
+        }
+      ],
+      "instructions": "1. Blend refried beans and taco seasoning in a medium bowl, spread mixture onto a large serving platter.\n2. Mix sour cream and cream cheese in a medium bowl, spread over refried beans, top with salsa.\n3. Layer tomato, bell pepper, green onions, and lettuce over top, sprinkle with Cheddar cheese and garnish with black olives.",
+      "created": "2025-12-01T15:14:10.853Z",
+      "id": 2644
+    },
+    {
+      "name": "Buttery Herb Stuffing",
+      "category": "Side Dish",
+      "ingredients": [
+        {
+          "qty": "8",
+          "unit": "Slices",
+          "name": "White bread"
+        },
+        {
+          "qty": "1/3",
+          "unit": "cup",
+          "name": "Butter"
+        },
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "diced Onion"
+        },
+        {
+          "qty": "1",
+          "unit": "Tbs",
+          "name": "Garlic",
+          "detail": "Pressed"
+        },
+        {
+          "qty": "1",
+          "unit": "Tbs",
+          "name": "Parsley"
+        },
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "Chicken Broth",
+          "detail": "or Stock"
+        },
+        {
+          "qty": "1",
+          "unit": "ea",
+          "name": "Eggs"
+        }
+      ],
+      "instructions": "1. Cube the bread and toast in oven\n2. Brush a baking dish with melted butter\n3. Heat the butter in a large skillet, Stir in the onion, celery, garlic (salt and pepper to taste)\n4. Cook until the onions and celery soften, about 8 to 10 minutes, Stir in the parsley, Cook for another minute\n5. In a bowl pour the mixture over the bread crumbs and toss well to coat\n6. Whisk together the remaining stock and eggs, Pour into the bread cubes, stir and fold until thoroughly combined\n7. Bake 45 to 50 minutes\n8. Add Giblets for authenticity! - PreCook: Pan fry in butter to just under-done",
+      "created": "2025-12-01T15:12:32.879Z",
+      "id": 2645
+    },
+    {
+      "name": "Zucchini Bread",
+      "category": "Bread",
+      "ingredients": [
+        {
+          "qty": "3",
+          "unit": "cups",
+          "name": "all-purpose flour"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "salt"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "baking powder"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "baking soda"
+        },
+        {
+          "qty": "1",
+          "unit": "Tbs",
+          "name": "cinnamon"
+        },
+        {
+          "qty": "3",
+          "unit": "ea",
+          "name": "eggs",
+          "detail": "large"
+        },
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "vegetable oil"
+        },
+        {
+          "qty": "2-1/4",
+          "unit": "cups",
+          "name": "white sugar"
+        },
+        {
+          "qty": "3",
+          "unit": "tsp",
+          "name": "vanilla",
+          "detail": "extract"
+        },
+        {
+          "qty": "2",
+          "unit": "cups",
+          "name": "zucchini",
+          "detail": "grated"
+        },
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "walnuts",
+          "detail": "chopped"
+        }
+      ],
+      "instructions": "1. Preheat the oven to 325, Grease and flour two 8x4-inch pans.\n2. Sift flour, salt, baking powder, baking soda, and cinnamon together in a large bowl.\n3. Beat eggs, oil, sugar, and vanilla together in a separate large bowl with an electric mixer until combined; add flour mixture and beat well. Stir in zucchini and walnuts until well combined. Pour batter into the prepared pans.\n4. Bake in the preheated oven until a toothpick inserted into the center comes out clean, about 40 to 60 minutes. Cool in the pans on a wire rack for 20 minutes. Run a table knife around the edges to loosen. Invert carefully onto a wire rack and let cool completely.",
+      "created": "2025-12-01T15:07:38.880Z",
+      "id": 2646
+    },
+    {
+      "name": "EASY FRENCH BREAD",
+      "category": "Bread",
+      "ingredients": [
+        {
+          "qty": "1-1/2",
+          "unit": "cups",
+          "name": "water",
+          "detail": "warm"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "honey"
+        },
+        {
+          "qty": "1-1/2",
+          "unit": "tsp",
+          "name": "salt"
+        },
+        {
+          "qty": "1",
+          "unit": "Tbs",
+          "name": "Dry Yeast",
+          "detail": "Active"
+        },
+        {
+          "qty": "4",
+          "unit": "cups",
+          "name": "all-purpose flour"
+        }
+      ],
+      "instructions": "1. Combine the water, honey, salt and yeast in a glass bowl. Let sit for 5-10 mins. until there's some bubbling, foam stuff on the top.\n2. Next, add a bunch of flour. I used just regular white organic flour. Keep kneading until it is no longer sticky.\n3. You want your dough to be sticking to itself, not your fingers. So, keep adding flour and keep kneading until that happens.\n4. Form the dough into a loaf shape. Cover with a towel and let sit on the counter for 20 mins (or on top of the preheating oven).\n5. This is the time to set the oven to 400 degrees.\n6. After 20 mins., cut slits in the top of the dough and bake for 16-20 mins.\n7. Variations can be made by adding garlic and oregano, or cinnamon and raisins, or whatever you dream up!\n\nNOTES: Punch down and knead a second time, re-shape and let rise another 20 Min for a fluffier bread.",
+      "created": "2025-12-01T15:07:06.374Z",
+      "id": 2647
+    },
+    {
+      "name": "BISCOTTI",
+      "category": "Cookies",
+      "ingredients": [
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "coconut oil"
+        },
+        {
+          "qty": "3/4",
+          "unit": "cup",
+          "name": "cane sugar"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "pumpkin",
+          "detail": "puree"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "vanilla",
+          "detail": "extract"
+        },
+        {
+          "qty": "1-3/4",
+          "unit": "cups",
+          "name": "all-purpose flour"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "cornmeal"
+        },
+        {
+          "qty": "1-1/2",
+          "unit": "tsp",
+          "name": "baking powder"
+        },
+        {
+          "qty": "1/4",
+          "unit": "tsp",
+          "name": "sea salt"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "oranges",
+          "detail": "zested"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "almonds",
+          "detail": "toasted/chopped"
+        },
+        {
+          "qty": "3/4",
+          "unit": "cup",
+          "name": "dark chocolate"
+        }
+      ],
+      "instructions": "1. Preheat oven to 350 degrees F (176 C).\n2. Melt coconut oil in a large mixing bowl. Add organic cane sugar and whisk thoroughly to combine.\n3. Add pumpkin puree and vanilla and whisk until completely combined.\n4. Next add flour, cornmeal, baking powder, salt, and orange zest. Stir until combined, but try not to over-mix.\n5. Add almonds and stir once more to evenly disperse.\n6. Use a knife or spatula to divide the dough into two even sections. Then using damp hands, form the two portions into long, semi-skinny logs. Try and make them as uniform in size and shape as possible so they bake evenly.\n7. Bake the loaves for 25-30 minutes, or until just slightly brown on the edges. Let cool slightly on the baking sheet, then use a serrated knife to gently slice into 3/4-inch pieces. Be very gentle when slicing.\n8. Gently turn the biscotti on their sides and return to the oven to bake for another 20 minutes, gently flipping once at the halfway point (10 minutes), to ensure even baking.\n9. Let cool briefly before enjoying. If dipping in chocolate, add chopped chocolate to a mixing bowl and microwave in 30 second increments until melted, or melt over a double boiler on the stovetop.\n10. Once the biscotti are slightly cooled, dip one half of the biscotti into the chocolate, use a spoon to spread it slightly, then scrape off the excess.\n11. Place on a parchment-lined baking sheet to dry. To speed setting, pop in the freezer. Otherwise, let dry at room temperature until completely set.\n12. Store covered at room temperature for 3-4 days. Will keep well-sealed in the freezer for up to 1 month.\n\nNOTES: The pumpkin puree is a substitute for eggs in this recipe. If you eat eggs, sub 2 large eggs",
+      "id": 2648
+    },
+    {
+      "name": "Savory Quick Bread",
+      "category": "Bread",
+      "ingredients": [
+        {
+          "qty": "2-1/4",
+          "unit": "cups",
+          "name": "all-purpose flour"
+        },
+        {
+          "qty": "1",
+          "unit": "Tbs",
+          "name": "baking powder"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "",
+          "detail": "salt"
+        },
+        {
+          "qty": "3",
+          "unit": "ea",
+          "name": "eggs",
+          "detail": "large"
+        },
+        {
+          "qty": "1-1/2",
+          "unit": "cups",
+          "name": "milk"
+        },
+        {
+          "qty": "6",
+          "unit": "Tbs",
+          "name": "canola oil"
+        }
+      ],
+      "instructions": "1. Preheat your oven to 350°F (177°C) and prepare a 9\"x 5\" (23 x 13 cm) loaf pan with pan spray or lined with parchment paper and set aside.\n2. In a large mixing bowl whisk together the flour, baking powder, salt, and any other spices and herbs you might be using.\n3. In a separate mixing bowl, whisk together the eggs, milk, oil, sugar (if making sweet quick bread), and any other extracts or liquids you may be using.\n4. Pour the liquid ingredients into the dry ingredients and using a spoon or a rubber spatula, stir the two together until combined. For the sweet quick bread, only stir until the flour is absorbed and then stop. The more you stir the more more tough the bread can become. For the savory quick bread, it could benefit you to give it a good stir for about a minute to purposefully develop some of the gluten strands so that it has more of a bread-like texture to it once baked.\n5. If using any other add-ins such as cheese, berries, nuts, etc... fold them in now.\n6. Pour the batter into the loaf pan and bake at 350°F (177°C) for 40-45 minutes, or until a toothpick inserted in the center comes out with moist crumb.\n7. NOTE: A quick bread is a culinary term for a bread like product that uses baking soda or baking powder, instead of yeast, to leaven it. The texture of a quick bread is very different from a yeast bread. A quick bread has more of a muffin like texture.\n8. VARIATIONS:\n9. Cheddar Bacon Chive Quick Bread: Cook 6 strips bacon until crispy & crumble. Fold in the bacon, 3 TbsP finely chopped chives, and 1 cup shredded sharp cheddar cheese right before putting into the pan to bake.\t\t\n10. Sundried Tomato Basil Quick Bread: Add 1 TbsP dried basil into the dry ingredients. Fold in 1 cup roughly chopped sundried tomatoes right before putting into the pan to bake.\n11. Olive Loaf Quick Bread: Use olive oil as the oil in the recipe. Add 1/2 TbsP dried oregano into the dry ingredients. Fold in 1 1/2 cups chopped, pitted, greek olives (such as kalamata) right before putting into the pan to bake.",
+      "created": "2025-12-01T15:07:17.840Z",
+      "id": 2649
+    },
+    {
+      "name": "Sweet Quick Bread",
+      "category": "Bread",
+      "ingredients": [
+        {
+          "qty": "2-1/4",
+          "unit": "cups",
+          "name": "all-purpose flour"
+        },
+        {
+          "qty": "1",
+          "unit": "Tbs",
+          "name": "baking powder"
+        },
+        {
+          "qty": "1/4",
+          "unit": "tsp",
+          "name": "salt"
+        },
+        {
+          "qty": "3",
+          "unit": "ea",
+          "name": "eggs",
+          "detail": "large"
+        },
+        {
+          "qty": "1-1/2",
+          "unit": "cups",
+          "name": "milk"
+        },
+        {
+          "qty": "6",
+          "unit": "Tbs",
+          "name": "canola oil"
+        },
+        {
+          "qty": "1-1/2",
+          "unit": "cups",
+          "name": "brown sugar"
+        },
+        {
+          "qty": "1/2",
+          "unit": "Tbs",
+          "name": "vanilla",
+          "detail": "extract"
+        }
+      ],
+      "instructions": "1. Preheat your oven to 350°F (177°C) and prepare a 9\"x 5\" (23 x 13 cm) loaf pan with pan spray or lined with parchment paper and set aside.\n2. In a large mixing bowl whisk together the flour, baking powder, salt, and any other spices and herbs you might be using.\n3. In a separate mixing bowl, whisk together the eggs, milk, oil, sugar (if making sweet quick bread), and any other extracts or liquids you may be using.\n4. Pour the liquid ingredients into the dry ingredients and using a spoon or a rubber spatula, stir the two together until combined. For the sweet quick bread, only stir until the flour is absorbed and then stop. The more you stir the more more tough the bread can become. For the savory quick bread, it could benefit you to give it a good stir for about a minute to purposefully develop some of the gluten strands so that it has more of a bread-like texture to it once baked.\n5. If using any other add-ins such as cheese, berries, nuts, etc... fold them in now.\n6. Pour the batter into the loaf pan and bake at 350°F (177°C) for 40-45 minutes, or until a toothpick inserted in the center comes out with moist crumb.\n7. NOTE: A quick bread is a culinary term for a bread like product that uses baking soda or baking powder, instead of yeast, to leaven it. The texture of a quick bread is very different from a yeast bread. A quick bread has more of a muffin like texture.\n\n--- NOTES ---\nVARIATIONS:\nDouble Chocolate Quick Bread: Add 1/4 cup cocoa powder (natural or dutch processed) into the dry ingredients. Fold in 1 cup chocolate chips into the batter right before putting into the pan to bake.\t\nCranberry Orange Quick Bread: Add 3/4 tsp orange zest & 2 TbsP orange juice into the wet ingredients. Fold in 1 cup of rough chopped fresh cranberries right before putting into the pan to bake.\nWalnut Spice Quick Bread: Add 1 1/2 tsp cinnamon, 1/8 tsp clove, 1/8 tsp allspice into the dry ingredients. Fold in 1 cup toasted & rough chopped walnuts (or pecans would also be good) into the batter right before putting into the pan to bake.",
+      "created": "2025-12-01T15:07:27.852Z",
+      "id": 2650
+    },
+    {
+      "name": "Blueberry Cake",
+      "category": "Dessert",
+      "ingredients": [
+        {
+          "qty": "2-1/2",
+          "unit": "cups",
+          "name": "all-purpose flour"
+        },
+        {
+          "qty": "1-1/2",
+          "unit": "cups",
+          "name": "white sugar"
+        },
+        {
+          "qty": "1",
+          "unit": "Tbs",
+          "name": "baking powder"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "salt"
+        },
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "milk"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "vegetable oil"
+        },
+        {
+          "qty": "2",
+          "unit": "ea",
+          "name": "eggs",
+          "detail": "beaten"
+        },
+        {
+          "qty": "2",
+          "unit": "tsp",
+          "name": "vanilla extract"
+        },
+        {
+          "qty": "2",
+          "unit": "cups",
+          "name": "blueberries",
+          "detail": "fresh"
+        },
+        {
+          "qty": "2",
+          "unit": "tsp",
+          "name": "all-purpose flour",
+          "detail": "or as needed"
+        },
+        {
+          "qty": "2",
+          "unit": "Tbs",
+          "name": "butter",
+          "detail": "melted"
+        },
+        {
+          "qty": "2",
+          "unit": "Tbs",
+          "name": "white sugar"
+        }
+      ],
+      "instructions": "1. Preheat oven to 375 degrees F (190 degrees C). Grease and flour a 9x13-inch baking dish.\n2. Sift 2 1/2 cups flour, 1 1/2 cup sugar, baking powder, and salt together in a bowl.\n3. Add milk, vegetable oil, eggs, and vanilla extract; mix into a semi-thick batter.\n4. Toss blueberries with about 2 teaspoons flour in a separate bowl; fold into batter.\n5. Pour batter into prepared baking dish.\n6. Bake in the preheated oven until cake is lightly browned, 25 to 30 minutes.\n7. Brush melted butter on top of cake and sprinkle with about 2 tablespoons sugar.\n8. Continue to bake until golden brown and a toothpick comes out clean, 5 to 10 more minutes.",
+      "created": "2025-12-01T15:08:49.697Z",
+      "id": 2651
+    },
+    {
+      "name": "Pineapple Upside-down Cake",
+      "category": "Dessert",
+      "ingredients": [
+        {
+          "qty": "2",
+          "unit": "cups",
+          "name": "Pineapple"
+        },
+        {
+          "qty": "3/4",
+          "unit": "cup",
+          "name": "butter"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "brown sugar"
+        },
+        {
+          "qty": "3/4",
+          "unit": "cup",
+          "name": "white sugar"
+        },
+        {
+          "qty": "1",
+          "unit": "ea",
+          "name": "eggs",
+          "detail": "large"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "vanilla"
+        },
+        {
+          "qty": "1-1/4",
+          "unit": "cups",
+          "name": "all-purpose flour"
+        },
+        {
+          "qty": "1-1/4",
+          "unit": "tsp",
+          "name": "baking powder"
+        },
+        {
+          "qty": "1/4",
+          "unit": "tsp",
+          "name": "salt"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "milk"
+        }
+      ],
+      "instructions": "1. Melt 1/4 cup butter; pour into an ungreased 9-in. round baking pan.\n2. Sprinkle with brown sugar. Arrange pineapple rings in single layer over sugar.\n3. In a large bowl, cream sugar and remaining butter until light and fluffy, 5-7 minutes.\n4. Beat in egg and vanilla. Combine the flour, baking powder and salt; add to creamed mixture alternately with milk, beating well after each addition. \n5. Spoon over pineapple.\n6. Bake at 350° until a toothpick comes out clean, 45-50 minutes. \n7. Cool for 10 minutes before inverting onto a serving plate. Serve warm.\n\nVARIATIONS:\nSliced peeled fresh peaches\nPecans",
+      "created": "2025-12-01T15:09:37.412Z",
+      "id": 2652
+    },
+    {
+      "name": "Peanut Butter Fudge",
+      "category": "Candy",
+      "ingredients": [
+        {
+          "qty": "3",
+          "unit": "cups",
+          "name": "Baking chips"
+        },
+        {
+          "qty": "1",
+          "unit": "can",
+          "name": "Sweetened condensed milk",
+          "detail": "14.5 oz - not evaporated"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "Peanut butter",
+          "detail": "not natural"
+        }
+      ],
+      "instructions": "1. Melt/blend in microwave in 1 Min increments until smooth\n2. Pour in foil lined/sprayed 8in square pan, cool 2 hours",
+      "created": "2025-12-01T15:07:57.816Z",
+      "id": 2653
+    },
+    {
+      "name": "Peanut Butter Cookies",
+      "category": "Cookies",
+      "ingredients": [
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "White sugar"
+        },
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "Peanut butter"
+        },
+        {
+          "qty": "1",
+          "unit": "ea",
+          "name": "eggs"
+        }
+      ],
+      "instructions": "1. Mix, roll into 1-1/4\" balls, dip in sugar, press with fork\n2. Bake at 350 for 15-20 minutes",
+      "id": 2654
+    },
+    {
+      "name": "Sugar free Peanut Butter Cookies",
+      "category": "Cookies",
+      "ingredients": [
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "peanut butter",
+          "detail": "Natural"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "honey"
+        },
+        {
+          "qty": "1",
+          "unit": "ea",
+          "name": "eggs"
+        },
+        {
+          "qty": "3/4",
+          "unit": "cup",
+          "name": "oat flour"
+        },
+        {
+          "qty": "1/2",
+          "unit": "tsp",
+          "name": "baking soda"
+        }
+      ],
+      "instructions": "1. Mix, roll into 1-1/4\" balls, press with fork\n2. Bake at 350 for 15-20 minutes",
+      "id": 2655
+    },
+    {
+      "name": "Sugar Cookies",
+      "category": "Cookies",
+      "ingredients": [
+        {
+          "qty": "1",
+          "unit": "stick",
+          "name": "butter",
+          "detail": "plus 2 Tbs"
+        },
+        {
+          "qty": "1/3",
+          "unit": "cup",
+          "name": "sugar"
+        },
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "all-purpose flour"
+        }
+      ],
+      "instructions": "1. Cream Sugar and Butter, add flour and mix, roll into 1in balls\n2. Bake at 325 for 15-17 minutes",
+      "id": 2656
+    },
+    {
+      "name": "LEMON SNAPS",
+      "category": "Cookies",
+      "ingredients": [
+        {
+          "qty": "1",
+          "unit": "stick",
+          "name": "butter",
+          "detail": "plus 2 Tbs"
+        },
+        {
+          "qty": "1/3",
+          "unit": "cup",
+          "name": "sugar"
+        },
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "all-purpose flour"
+        },
+        {
+          "qty": "1",
+          "unit": "ea",
+          "name": "eggs"
+        },
+        {
+          "qty": "3",
+          "unit": "Tbs",
+          "name": "lemon juice"
+        },
+        {
+          "qty": "1/4",
+          "unit": "tsp",
+          "name": "baking soda"
+        }
+      ],
+      "instructions": "1. Cream Sugar and Butter, add flour and mix\n2. Mix in Egg, Lemon juice and Baking soda, roll into 1\" balls\n3. Bake at 325 for 15-17 minutes",
+      "id": 2657
+    },
+    {
+      "name": "Refrigerator Cookies",
+      "category": "Cookies",
+      "ingredients": [
+        {
+          "qty": "3/4",
+          "unit": "cup",
+          "name": "butter",
+          "detail": "room temp"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "powdered sugar"
+        },
+        {
+          "qty": "2-1/4",
+          "unit": "cups",
+          "name": "all-purpose flour"
+        }
+      ],
+      "instructions": "1. Knead into dough, roll into log, sugar coat\n2. wrap and freeze for 30 minutes.\n3. Slice and bake at 325 for 20 minutes",
+      "id": 2658
+    },
+    {
+      "name": "SNICKERDOODLES",
+      "category": "Cookies",
+      "ingredients": [
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "shortening"
+        },
+        {
+          "qty": "1-1/2",
+          "unit": "cups",
+          "name": "white sugar"
+        },
+        {
+          "qty": "2",
+          "unit": "ea",
+          "name": "eggs"
+        },
+        {
+          "qty": "2-3/4",
+          "unit": "cups",
+          "name": "all-purpose flour"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "baking soda"
+        },
+        {
+          "qty": "2",
+          "unit": "tsp",
+          "name": "cream of tartar"
+        },
+        {
+          "qty": "1/2",
+          "unit": "tsp",
+          "name": "salt"
+        },
+        {
+          "qty": "2",
+          "unit": "Tbs",
+          "name": "white sugar"
+        },
+        {
+          "qty": "2",
+          "unit": "tsp",
+          "name": "ground cinnamon"
+        }
+      ],
+      "instructions": "1. Cream shortening and sugar, stir in the eggs.\n2. Blend flour, baking soda, cream of tartar and salt, stir into the creamed mixture\n3. In a small bowl stir together the 2 tablespoons of sugar, and the cinnamon\n4. Roll into balls then roll in the cinnamon-sugar\n5. Bake at 375 for 8-10 minutes",
+      "id": 2659
+    },
+    {
+      "name": "GINGER SNAPS",
+      "category": "Cookies",
+      "ingredients": [
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "Brown sugar",
+          "detail": "packed"
+        },
+        {
+          "qty": "3/4",
+          "unit": "cup",
+          "name": "vegetable oil"
+        },
+        {
+          "qty": "1/4",
+          "unit": "cup",
+          "name": "molasses"
+        },
+        {
+          "qty": "1",
+          "unit": "ea",
+          "name": "eggs"
+        },
+        {
+          "qty": "2",
+          "unit": "cups",
+          "name": "all-purpose flour"
+        },
+        {
+          "qty": "2",
+          "unit": "tsp",
+          "name": "baking soda"
+        },
+        {
+          "qty": "1/4",
+          "unit": "tsp",
+          "name": "salt"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "cinnamon"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "ginger"
+        },
+        {
+          "qty": "1/3",
+          "unit": "cup",
+          "name": "white sugar",
+          "detail": "for decoration"
+        }
+      ],
+      "instructions": "1. Mix brown sugar, oil, molasses, and egg\n2. Combine flour, baking soda, salt, cinnamon, and ginger, stir into the molasses mixture\n3. Roll into 1 1/4 inch balls, roll balls in white sugar\n4. Bake at 375 for 10-12 minutes",
+      "id": 2660
+    },
+    {
+      "name": "Quick-n-easy pie crust",
+      "category": "Baking Ingredient",
+      "ingredients": [
+        {
+          "qty": "2-1/2",
+          "unit": "cups",
+          "name": "all-purpose flour"
+        },
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "butter",
+          "detail": "unsalted, chilled, cut into tablespoon-size pieces"
+        },
+        {
+          "qty": "1/2",
+          "unit": "tsp",
+          "name": "salt"
+        },
+        {
+          "qty": "7",
+          "unit": "Tbs",
+          "name": "water",
+          "detail": "icy"
+        },
+        {
+          "qty": "1",
+          "unit": "Tbs",
+          "name": "apple cider vinegar"
+        }
+      ],
+      "instructions": "1. Combine flour, salt, and butter in a food processor. Pulse until mixture resembles coarse crumbs, about 10 1-second pulses.\n2. Stir water and vinegar in a small bowl.\n3. Pour half the ice water and vinegar mixture into the flour and butter mixture, pulse to combine, about 3 (1-second) pulses.\n4. Pour in remaining ice water and vinegar mixture. Pulse until mixture just starts to come together, about 8 (1-second) pulses.\n5. Turn dough out onto a wooden surface, pat into round shape and divide in half. \n6. Form each half into a disc about 5 inches wide.\n7. Wrap each disc in plastic wrap and refrigerate for at least 30 minutes until ready to use.\n8. Roll out to size of pie pan being used, place bottom layer and pre-bake to make bottom crust (350 - 20 Min)",
+      "created": "2025-12-01T15:06:27.494Z",
+      "id": 2661
+    },
+    {
+      "name": "Creamy Blueberry Pie",
+      "category": "Dessert",
+      "ingredients": [
+        {
+          "qty": "3",
+          "unit": "cups",
+          "name": "blueberries",
+          "detail": "fresh"
+        },
+        {
+          "qty": "1",
+          "unit": "ea",
+          "name": "pie crust",
+          "detail": "deep dish (9in)"
+        },
+        {
+          "qty": "1-1/2",
+          "unit": "cup",
+          "name": "white sugar"
+        },
+        {
+          "qty": "1/3",
+          "unit": "cup",
+          "name": "all-purpose flour"
+        },
+        {
+          "qty": "1/8",
+          "unit": "tsp",
+          "name": "salt"
+        },
+        {
+          "qty": "2",
+          "unit": "ea",
+          "name": "eggs",
+          "detail": "beaten"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "sour cream"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "all-purpose flour"
+        },
+        {
+          "qty": "1/4",
+          "unit": "cup",
+          "name": "butter"
+        }
+      ],
+      "instructions": "1. Preheat oven to 350 degrees F (175 degrees C). Place the blueberries in the pastry shell and set aside.\n2. Combine 1 cup sugar, 1/3 cup flour, and salt. Add eggs and sour cream, stirring until blended. Pour the sour cream custard over the blueberries.\n3. In another bowl, combine 1/2 cup sugar and 1/2 cup flour. Cut in the butter with pastry blender until the mixture resembles coarse meal.\n4. Sprinkle the topping over the sour cream mixture and berries in the pie shell.\n5. Bake in the preheated oven for 50 to 55 minutes, or until lightly browned. \n6. Cool on wire rack.",
+      "created": "2025-12-01T15:09:15.701Z",
+      "id": 2662
+    },
+    {
+      "name": "Caramel Apple Pie",
+      "category": "Dessert",
+      "ingredients": [
+        {
+          "qty": "6",
+          "unit": "Tbs",
+          "name": "butter",
+          "detail": "unsalted"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "white sugar"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "brown sugar"
+        },
+        {
+          "qty": "1/4",
+          "unit": "cup",
+          "name": "water"
+        },
+        {
+          "qty": "1/4",
+          "unit": "tsp",
+          "name": "cinnamon"
+        },
+        {
+          "qty": "1",
+          "unit": "pinch",
+          "name": "salt"
+        },
+        {
+          "qty": "5",
+          "unit": "ea",
+          "name": "apples",
+          "detail": "peeled, cored and sliced"
+        },
+        {
+          "qty": "1",
+          "unit": "ea",
+          "name": "pie crust",
+          "detail": "prepared"
+        }
+      ],
+      "instructions": "1. Preheat oven to 425 degrees F (220 degrees C).\n2. Combine butter, white sugar, brown sugar, water, cinnamon, and salt in a saucepan over medium heat. Bring to a boil, remove from heat and set aside.\n3. In your already prepared pie crust (see above) pour in apple slices.\n4. Roll out top crust into a 10-inch circle. Cut into 8 (1-inch) wide strips with a sharp paring knife or pastry wheel.\n5. Weave the pastry strips, one at a time, into a lattice pattern. Fold the ends of the lattice strips under the edge of the bottom crust and crimp to seal.\n6. Pour butter-sugar mixture over top of pie, coating the lattice, and allowing any remaining sauce to drizzle through the crust.\n7. Bake in the preheated oven for 15 minutes. Reduce heat to 350 degrees F (175 degrees C)\n8. Bake until the crust is golden brown, the caramel on the top crust is set, and the apple filling is bubbling, 35 to 40 more minutes.\n9. Allow to cool completely before slicing.",
+      "created": "2025-12-01T15:09:05.297Z",
+      "id": 2663
+    },
+    {
+      "name": "Chicken Pot Pie",
+      "category": "Main Dish",
+      "ingredients": [
+        {
+          "qty": "2",
+          "unit": "cups",
+          "name": "mixed vegetables",
+          "detail": "frozen"
+        },
+        {
+          "qty": "2",
+          "unit": "ea",
+          "name": "chicken breasts",
+          "detail": "boneless, skinless"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "thyme",
+          "detail": "dried"
+        },
+        {
+          "qty": "1",
+          "unit": "can",
+          "name": "cream of Chicken soup",
+          "detail": "10.75 oz, condensed"
+        },
+        {
+          "qty": "2",
+          "unit": "ea",
+          "name": "pie crust",
+          "detail": "See: Quick-n-easy Pie Crust"
+        },
+        {
+          "qty": "1",
+          "unit": "Tbs",
+          "name": "Cornstarch",
+          "detail": "mixed with water"
+        }
+      ],
+      "instructions": "1. Preheat oven to 400F (200C). Line a 9 inch pie dish with a 'Quick-n-easy' pie crust.\n2. Dice chicken and brown in fry pan with oil and seasonings of choice.\n3. Add 1/2 cup water to chicken and cook to bring out flavors, stir in corn starch mix to thicken (May not need all of it!).\n4. Add vegetables, thyme and soup to chicken, Stir together.\n5. Pour filling into lined pie dish. Arrange top layer of pie crust, seal and flute the edges. \n6. Cut slits in the top of the crust to allow for steam to escape.\n7. Place pie on cookie sheet.\n8. Bake for 30 minutes.\n9. Remove from oven and let stand for 5 minutes and then serve.",
+      "created": "2025-12-01T15:29:48.861Z",
+      "id": 2664
+    },
+    {
+      "name": "Pecan Pie",
+      "category": "Dessert",
+      "ingredients": [
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "",
+          "detail": "brown sugar"
+        },
+        {
+          "qty": "1/3",
+          "unit": "cup",
+          "name": "butter",
+          "detail": "melted"
+        },
+        {
+          "qty": "3/4",
+          "unit": "cup",
+          "name": "corn syrup",
+          "detail": "light"
+        },
+        {
+          "qty": "1/2",
+          "unit": "tsp",
+          "name": "salt"
+        },
+        {
+          "qty": "3",
+          "unit": "ea",
+          "name": "eggs"
+        },
+        {
+          "qty": "1-1/2",
+          "unit": "cups",
+          "name": "pecans",
+          "detail": "halves or pieces"
+        }
+      ],
+      "instructions": "1. Heat oven to 375°F; place cookie sheet in oven to preheat.\n2. In medium bowl, beat brown sugar, butter, corn syrup, salt and eggs with whisk until well blended\n3. Stir in pecans. Pour into crust. \n4. Bake on preheated cookie sheet 35 to 45 minutes or until center is set.\n5. After 15 to 20 minutes of baking, cover crust edge with strips of foil to prevent excessive browning.\n6. Cool 30 minutes",
+      "created": "2025-12-01T15:09:27.561Z",
+      "id": 2665
+    },
+    {
+      "name": "PINWHEELS - Mexican",
+      "category": "Appetizer",
+      "ingredients": [
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "sour cream"
+        },
+        {
+          "qty": "8",
+          "unit": "oz",
+          "name": "cream cheese"
+        },
+        {
+          "qty": "4",
+          "unit": "oz",
+          "name": "green chilies",
+          "detail": "diced"
+        },
+        {
+          "qty": "4",
+          "unit": "oz",
+          "name": "black olives",
+          "detail": "chopped"
+        },
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "cheddar cheese",
+          "detail": "shredded"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "green onions",
+          "detail": "chopped"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "garlic powder"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "season salt"
+        },
+        {
+          "qty": "5",
+          "unit": "ea",
+          "name": "flour tortillas",
+          "detail": "10in"
+        }
+      ],
+      "instructions": "1. Mix all ingredients\n2. Spread over tortillas and roll-up\n3. Slice into 1/2 or 3/4 inch rounds\n4. NOTES: The thinner you spread it the more rounds you'll have, thicker makes heartier rounds",
+      "created": "2025-12-01T15:14:03.384Z",
+      "id": 2666
+    },
+    {
+      "name": "PINWHEELS - Ham-n-Cheese",
+      "category": "Appetizer",
+      "ingredients": [
+        {
+          "qty": "16",
+          "unit": "oz",
+          "name": "cream cheese"
+        },
+        {
+          "qty": "1",
+          "unit": "pkt",
+          "name": "Ranch Seasoning",
+          "detail": "mix"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "cheddar cheese",
+          "detail": "shredded"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "ham",
+          "detail": "finely chopped"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "green onion",
+          "detail": "chopped"
+        },
+        {
+          "qty": "5",
+          "unit": "ea",
+          "name": "flour tortillas"
+        }
+      ],
+      "instructions": "1. Mix all ingredients\n2. Spread over tortillas and roll-up\n3. Slice into 1/2 or 3/4 inch rounds\n4. NOTES: The thinner you spread it the more rounds you'll have, thicker makes heartier rounds",
+      "created": "2025-12-01T15:13:48.551Z",
+      "id": 2667
+    },
+    {
+      "name": "PINWHEELS - JALAPEÑO POPPER",
+      "category": "Appetizer",
+      "ingredients": [
+        {
+          "qty": "8",
+          "unit": "oz",
+          "name": "cream cheese"
+        },
+        {
+          "qty": "1/3",
+          "unit": "cup",
+          "name": "sour cream"
+        },
+        {
+          "qty": "1-1/2",
+          "unit": "cups",
+          "name": "sharp cheddar",
+          "detail": "shredded"
+        },
+        {
+          "qty": "1/4",
+          "unit": "cup",
+          "name": "bacon bits"
+        },
+        {
+          "qty": "1/4",
+          "unit": "cup",
+          "name": "jalapeno peppers",
+          "detail": "finely chopped, seeds and membrane removed"
+        },
+        {
+          "qty": "2",
+          "unit": "ea",
+          "name": "green onion",
+          "detail": "chopped"
+        },
+        {
+          "qty": "5",
+          "unit": "ea",
+          "name": "tortillas"
+        }
+      ],
+      "instructions": "1. Mix all ingredients\n2. Spread over tortillas and roll-up\n3. Slice into 1/2 or 3/4 inch rounds\n4. NOTES: The thinner you spread it the more rounds you'll have, thicker makes heartier rounds",
+      "created": "2025-12-01T15:13:56.084Z",
+      "id": 2668
+    },
+    {
+      "name": "Tuna Salad Sandwich",
+      "category": "Sandwich",
+      "ingredients": [
+        {
+          "qty": "4",
+          "unit": "oz",
+          "name": "tuna",
+          "detail": "canned"
+        },
+        {
+          "qty": "1/2",
+          "unit": "ea",
+          "name": "avocado",
+          "detail": "medium-sized"
+        },
+        {
+          "qty": "1/4",
+          "unit": "cup",
+          "name": "greek yogurt",
+          "detail": "plain"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "cucumber",
+          "detail": "english, diced"
+        },
+        {
+          "qty": "1/4",
+          "unit": "ea",
+          "name": "onion",
+          "detail": "chopped"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "garlic powder"
+        }
+      ],
+      "instructions": "1. Mix all ingredients, Salt and pepper to taste\n2. Spread on your favorite bread",
+      "created": "2025-12-01T15:11:39.191Z",
+      "id": 2669
+    },
+    {
+      "name": "Egg Salad Sandwich",
+      "category": "Sandwich",
+      "ingredients": [
+        {
+          "qty": "8",
+          "unit": "ea",
+          "name": "eggs",
+          "detail": "hardboiled"
+        },
+        {
+          "qty": "1/4",
+          "unit": "cup",
+          "name": "Greek yogurt"
+        },
+        {
+          "qty": "1",
+          "unit": "Tbsp",
+          "name": "dijon mustard"
+        },
+        {
+          "qty": "2",
+          "unit": "Tbsp",
+          "name": "chives",
+          "detail": "chopped or green onion"
+        },
+        {
+          "qty": "1/2",
+          "unit": "tsp",
+          "name": "salt"
+        },
+        {
+          "qty": "1/4",
+          "unit": "tsp",
+          "name": "pepper"
+        }
+      ],
+      "instructions": "1. Mix all ingredients, Salt and pepper to taste\n2. Spread on your favorite bread",
+      "created": "2025-12-01T15:12:02.821Z",
+      "id": 2670
+    },
+    {
+      "name": "Shortbread Pecan Pie Bars",
+      "category": "Dessert Bars",
+      "ingredients": [
+        {
+          "qty": "1",
+          "unit": "Can",
+          "name": "Cooking Spray"
+        },
+        {
+          "qty": "2",
+          "unit": "cups",
+          "name": "all-purpose flour"
+        },
+        {
+          "qty": "3/4",
+          "unit": "cup",
+          "name": "butter",
+          "detail": "cold, unsalted, cubed"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "powdered sugar"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "salt"
+        },
+        {
+          "qty": "4",
+          "unit": "ea",
+          "name": "eggs",
+          "detail": "large"
+        },
+        {
+          "qty": "2/3",
+          "unit": "cup",
+          "name": "brown sugar",
+          "detail": "light"
+        },
+        {
+          "qty": "1/4",
+          "unit": "cup",
+          "name": "butter",
+          "detail": "salted, melted"
+        },
+        {
+          "qty": "1/4",
+          "unit": "cup",
+          "name": "all-purpose flour"
+        },
+        {
+          "qty": "3/4",
+          "unit": "tsp",
+          "name": "salt"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "syrup",
+          "detail": "Golden Eagle"
+        },
+        {
+          "qty": "3",
+          "unit": "cups",
+          "name": "pecans",
+          "detail": "chopped"
+        }
+      ],
+      "instructions": "Preheat the oven to 350 degrees F (175 degrees C). Line a 9x13-inch baking pan with parchment paper, leaving a 2-inch overhang on at least 2 sides. Spray the parchment paper with baking spray.\nCombine flour, butter, powdered sugar, and salt in a food processor and pulse 6 or 7 times to combine. Transfer mixture to the lined pan and press into an even layer.\nBake in the preheated oven until lightly golden brown, about 20 minutes. Transfer pan to a wire rack.\nCombine eggs, brown sugar, melted butter, flour, and salt together in a large bowl. Mix in syrup until well combined. Stir in pecans. Pour over the still-warm shortbread crust.\nBake in the preheated oven until filling is set, 25 to 30 minutes. Cool completely in the pan for at least 1 hour. Run a knife around the edge of the pan and pull out using the parchment overhang. Slice into bars.",
+      "created": "2025-12-01T15:10:09.774Z",
+      "id": 2673
+    },
+    {
+      "name": "Pecan Pie Bars",
+      "category": "Dessert Bars",
+      "ingredients": [
+        {
+          "qty": "1",
+          "unit": "pkg",
+          "name": "pie crust",
+          "detail": "refrigerated, 16oz - 2 crusts"
+        },
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "corn syrup",
+          "detail": "light"
+        },
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "brown sugar",
+          "detail": "packed"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "butter",
+          "detail": "unsalted, melted"
+        },
+        {
+          "qty": "3",
+          "unit": "ea",
+          "name": "eggs",
+          "detail": "large"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "vanilla",
+          "detail": "extract"
+        },
+        {
+          "qty": "1-1/2",
+          "unit": "cups",
+          "name": "pecans",
+          "detail": "halves"
+        },
+        {
+          "qty": "1/4",
+          "unit": "tsp",
+          "name": "salt"
+        }
+      ],
+      "instructions": "Preheat Oven: Preheat your oven to 350°F Grease a 9×13-inch baking pan.\nPrepare Pie Crust: Roll out the refrigerated pie crusts and fit them into the bottom of the greased baking pan, pressing down gently to cover the entire bottom.\nMake Filling: In a large mixing bowl, whisk together the corn syrup, brown sugar, melted butter, eggs, vanilla extract, and salt until smooth. Stir in the pecan halves until evenly coated.\nPour Filling: Pour the pecan filling over the pie crust in the baking pan, spreading it evenly.\nBake: Bake in the preheated oven for 30-35 minutes, or until the filling is set and the top is golden brown. Allow to cool completely before cutting into bars.",
+      "created": "2025-12-01T15:09:57.315Z",
+      "id": 2674
+    },
+    {
+      "name": "Coffee Cake",
+      "category": "Dessert / Breakfast",
+      "ingredients": [
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "butter",
+          "detail": "softened"
+        },
+        {
+          "qty": "8",
+          "unit": "oz",
+          "name": "cream cheese",
+          "detail": "softened"
+        },
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "brown sugar"
+        },
+        {
+          "qty": "3/4",
+          "unit": "cup",
+          "name": "sugar"
+        },
+        {
+          "qty": "2",
+          "unit": "ea",
+          "name": "eggs",
+          "detail": "large"
+        },
+        {
+          "qty": "1-1/2",
+          "unit": "tsp",
+          "name": "vanilla",
+          "detail": "extract"
+        },
+        {
+          "qty": "2-1/2",
+          "unit": "cups",
+          "name": "all-purpose flour"
+        },
+        {
+          "qty": "2",
+          "unit": "tsp",
+          "name": "baking powder"
+        },
+        {
+          "qty": "1",
+          "unit": "tsp",
+          "name": "cornstarch"
+        },
+        {
+          "qty": "1/2",
+          "unit": "tsp",
+          "name": "salt"
+        },
+        {
+          "qty": "1/2",
+          "unit": "cup",
+          "name": "milk"
+        }
+      ],
+      "instructions": "Preheat oven to 350F and lightly grease and flour a 13×9 baking pan.\nIn stand mixer, or using an electric mixer in large bowl, cream together butter and cream cheese.\nBeat in 1/2 cup sugar and 1 cup brown sugar until light and fluffy.\nAdd eggs, one at a time, beating until combined. Scrape down sides and bottom of mixing bowl with rubber spatula.\nStir in vanilla extract.\nIn a separate, medium-sized bowl, whisk together flour, baking powder, cornstarch and salt.\nGradually add flour mixture to wet ingredients, alternating with buttermilk, until all of the flour mixture and buttermilk have been combined.\nSpread about half of the batter into prepared pan (batter will be thick).\nQuickly whisk together sugar and cinnamon for cinnamon swirl layer (see below) in a small bowl and sprinkle it evenly over the batter.\nDollop remaining batter over the cinnamon sugar layer and use a knife to spread evenly overtop. Swirl the cinnamon/sugar in with a knife. Set aside and prepare your streusel topping (see below).\nBake at 350F for 40-50 minutes (check doneness with a toothpick inserted in center, it should come out clean or with a few moist crumbs).\nAllow to cool before cutting and serving.\n-STREUSEL TOPPING: (ingredients below)\nMelt butter in a medium-sized bowl on 10 second increments (stirring between) until just melted (you don’t want it to be too hot, if it does get too hot allow to cool.\nUse a fork to stir together your flour, sugars, cinnamon, and salt.   Pour melted butter over mixture and use a fork to toss/claw together the ingredients until combined (mixture should be crumbly).\nSprinkle streusel evenly over batter.\n-STREUSEL INGREDIENTS:\n1-1/3 cup all-purpose flour (175g)\n1 cup + 2 Tbs brown sugar\n3 Tbs sugar\n4-1/2 tsp cinnamon\n1/4 tsp salt\n10 Tbs butter, melted \n-CINNAMON SWIRL:\n1/4 cup sugar\n1-1/2 tsp cinnamon\n-GLAZE (optional)\n1/2 cup powdered sugar\n2-3 teaspoons milk",
+      "created": "2025-12-01T15:10:37.370Z",
+      "id": 2675
+    },
+    {
+      "name": "Bean Dip",
+      "category": "Appetizer",
+      "ingredients": [
+        {
+          "qty": "6",
+          "unit": "oz",
+          "name": "Sour cream"
+        },
+        {
+          "qty": "1/2",
+          "unit": "pkg",
+          "name": "Taco seasoning"
+        },
+        {
+          "qty": "1/8",
+          "unit": "cup",
+          "name": "onion",
+          "detail": "diced"
+        },
+        {
+          "qty": "1/4",
+          "unit": "cup",
+          "name": "Tomato",
+          "detail": "Diced or drained salsa"
+        },
+        {
+          "qty": "8",
+          "unit": "oz",
+          "name": "Cheese",
+          "detail": "Shredded"
+        },
+        {
+          "qty": "1",
+          "unit": "cup",
+          "name": "Iceberg Lettuce",
+          "detail": "Shredded"
+        },
+        {
+          "qty": "1/4",
+          "unit": "cup",
+          "name": "Black olives",
+          "detail": "diced, drained"
+        }
+      ],
+      "instructions": "Spread beans in 8in dish \nLayer with lettuce\nMix sour cream and taco seasoning, spread over top\nTop with tomato/salsa, onions, olives. Sprinkle Cheddar over top",
+      "created": "2025-12-01T15:05:41.339Z",
+      "id": 2676
+    }
+  ],
+  "shopping": [],
+  "planner": [],
+  "exported": "2025-12-01T20:56:54.976Z"
+}
